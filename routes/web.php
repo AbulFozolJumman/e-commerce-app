@@ -7,4 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/create-brand', [DemoController::class, 'DemoAction'] );
+Route::post('/create-brand', [DemoController::class, 'CreateBrand'] );
+Route::post('/update-brand/{id}', [DemoController::class, 'UpdateBrand'] );
