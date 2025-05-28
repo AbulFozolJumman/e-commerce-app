@@ -20,4 +20,9 @@ class DemoController extends Controller
         return Brand::updateOrCreate(['brandName'=> $request->brandName],
         $request->input());
     }
+
+    public function DeleteBrand(Request $request) {
+        return Brand::where('id', '=', $request->id)
+        ->delete();
+    }
 }

@@ -10,3 +10,4 @@ Route::get('/', function () {
 Route::post('/create-brand', [DemoController::class, 'CreateBrand'] );
 Route::post('/update-brand/{id}', [DemoController::class, 'UpdateBrand'] );
 Route::post('/update-or-create-brand/{brandName}', [DemoController::class, 'UpdateOrCreateBrand'] );
+Route::get('/delete-brand/{id}', [DemoController::class, 'DeleteBrand'] );
