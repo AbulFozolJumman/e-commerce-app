@@ -15,4 +15,9 @@ class DemoController extends Controller
         return Brand::where('id', $request->id)
         ->update($request->input());
     }
+
+    public function UpdateOrCreateBrand(Request $request) {
+        return Brand::updateOrCreate(['brandName'=> $request->brandName],
+        $request->input());
+    }
 }
